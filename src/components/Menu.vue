@@ -1,14 +1,18 @@
 <template>
-  <nav class="bg-gray-800 p-4">
-    <button @click="toggleMenu" class="text-white cursor-pointer">
-      ☰ Menu
-    </button>
-    <ul :class="{'hidden': !isOpen, 'block': isOpen}" class="md:flex md:gap-5">
-      <li v-for="item in menuItems" :key="item.text" class="relative group">
-        <a :href="item.link" class="text-white hover:text-blue-400">{{ item.text }}</a>
-        <ul v-if="item.subItems" class="absolute left-0 mt-2 w-40 bg-gray-700 p-2 group-hover:block">
-          <li v-for="subItem in item.subItems" :key="subItem.text">
-            <a :href="subItem.link" class="text-white hover:text-blue-400 block p-2">{{ subItem.text }}</a>
+  <nav class="bg-gray-800 text-white p-4">
+    <ul class="space-y-2 flex gap-5">
+      <li v-for="item in menuItems" :key="item.id" class="relative group">
+        <a :href="item.url" class="block w-full text-left px-4 py-2 hover:bg-gray-700">
+          {{ item.label }}
+        </a>
+        <ul
+          v-if="item.children"
+          class="absolute left-0 top-[90%] bg-gray-700 text-white w-[150px] hidden group-hover:block"
+        >
+          <li v-for="child in item.children" :key="child.id" class="py-1 px-2 hover:bg-gray-600">
+            <a :href="child.url" class="block w-full">
+              {{ child.label }}
+            </a>
           </li>
         </ul>
       </li>
@@ -16,40 +20,32 @@
   </nav>
 </template>
 
-
-
 <script>
 export default {
   data() {
     return {
-      isOpen: false,
       menuItems: [
-        { text: "Trang chủ", link: "#" },
-        { text: "Sản phẩm", link: "#", subItems: [
-          { text: "Điện thoại", link: "#" },
-          { text: "Laptop", link: "#" },
-          { text: "Phụ kiện", link: "#" }
-        ]},
-        { text: "Liên hệ", link: "#" }
-      ]
+        { id: 1, label: "HOME", children: null, url: "/index.html" },
+        {
+          id: 2,
+          label: "当院について",
+          children: [
+            { id: 3, label: "初めての方へ", url: "#section1" },
+            { id: 4, label: "院長紹介", url: "#section2" },
+            { id: 5, label: "本院紹介", url: "/about.html#" },
+          ],
+        },
+        { id: 6, label: "診療時間・アクセス", children: null, url: "./menu.html" },
+        { id: 7, label: "お知らせ", children: null, url: "./menu.html" },
+      ],
     };
   },
-  methods: {
-    toggleMenu() {
-      this.isOpen = !this.isOpen;
-    }
-  }
 };
+
+
 </script>
 
-<style scoped>
-@media (min-width: 768px) {
-  .hidden {
-    display: none;
-  }
-  .block {
-    display: flex;
-  }
-}
-</style>
+
+
+
 
