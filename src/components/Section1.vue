@@ -1,6 +1,4 @@
 <template>
-
-
   <section id="section1" class="md:flex items-center p-8 bg-gray-100 gap-10">
     <!-- Phần trái: Tiêu đề + nội dung + button -->
    <div class="md:w-1/2 info mb-6 md:mb-0">

@@ -1,0 +1,115 @@
+@import "tailwindcss";
+#head-key {
+  @apply relative h-[530px];
+}
+#key-box {
+  @apply pt-0;
+}
+.key__info {
+  @apply w-[43%] relative z-[2] pl-[23px] pt-4;
+}
+.key__info .txt__shadow {
+  @apply text-[17px] font-semibold pl-4 text-shadow-[0_3px_6px_#fff];
+}
+.key__img {
+  @apply absolute h-full top-0 inset-x-0;
+}
+.key__logo {
+  @apply items-center pt-4 pb-[25px];
+}
+.key__logo p {
+  @apply w-[297px];
+}
+.key__logo p + p {
+  @apply w-[91px] ml-[18px];
+}
+.key__note {
+  @apply font-semibold text-black text-base tracking-[1px] mb-5 px-[5px] py-[9px] bg-white/90 text-center;
+}
+.key__note span {
+  @apply text-[#D53000] text-[23px];
+}
+.key__note small {
+  @apply text-base pl-0;
+}
+.key__catch {
+  @apply text-[13px] pl-[31px] pr-[22px] py-3.5 bg-white/80;
+}
+.key__check {
+  @apply text-sm font-medium relative tracking-[2px] mb-[9px] pl-9 before:content-[""] before:bg-[100%_auto] before:w-[21px] before:h-4 before:absolute before:-translate-y-2/4 before:left-[5px] before:top-2/4;
+}
+.key__check::before {
+  @apply bg-[url(@/assets/images/shared/icon_check_g.png)] bg-center bg-no-repeat;
+}
+.key__check span {
+  @apply text-[17px] font-semibold text-[#004267];
+}
+.key__tag {
+  @apply flex items-center flex-wrap gap-[3px] mb-3.5;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+}
+.key__tag a {
+  @apply border inline-block text-[13px] text-black leading-[25px] tracking-[0px] px-[9px] py-0.5 rounded-[5px] border-solid border-[#004267] hover:opacity-60 last:border-[none] bg-white;
+}
+.key__tag a:last-child {
+  background: none;
+}
+@media only screen and (max-width: 560px) {
+  #head-key {
+    @apply h-[620px];
+  }
+  #head-key .bnr__web {
+    @apply w-[370px] max-w-[470px];
+  }
+  #head-key .bnr__web a {
+    @apply px-0 py-2.5;
+  }
+  .key__tag {
+    @apply gap-[3px] mb-3.5;
+  }
+  .key__tag a {
+    @apply text-lg px-[9px] py-0.5;
+  }
+}
+
+/*feature*/
+#feature {
+  @apply pt-[79px] pb-[69px] px-0 bg-[#ddeaf1];
+}
+.feature__row {
+  @apply gap-[17px] mx-[21px] my-0;
+}
+.feature__col {
+  @apply w-[334px] box-border pt-[33px] pb-[13px] px-[31px] bg-white;
+}
+.feature__item .ob-img {
+  @apply h-[180px];
+}
+.feature__item dl {
+  @apply pt-5 pb-0 px-0;
+}
+.feature__item dl dt {
+  @apply text-[#004267] text-base font-semibold mb-5;
+}
+.feature__item dl dd {
+  @apply text-sm leading-5;
+}
+@media only screen and (max-width: 560px) {
+  #feature {
+    @apply px-0 py-20;
+  }
+  .feature__row {
+    @apply gap-[30px] m-0;
+  }
+  .feature__col {
+    @apply w-full p-[30px];
+  }
+  .feature__item dl dt {
+    @apply text-[22px];
+  }
+  .feature__item dl dd {
+    @apply text-xl leading-[1.6];
+  }
+}

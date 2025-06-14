@@ -1,12 +1,20 @@
 <template>
+  <main>
     <!-- Header -->
-    <header class="bg-gray-800 text-white p-4">
-      <h1 class="text-2xl">My Website</h1>
-      <Menu />
-    </header>
+
+<header class="header-box">
+  <div class="wrap">
+ <Menu />
+  </div>
+</header>
+
 
         <!-- Nội dung chính -->
-    <main class="flex-1">
+<section>
+
+
+
+<Home />
 
     <!-- Section 1 -->
     <Section1 />
@@ -15,25 +23,25 @@
     <Section2 />
 
 
-    </main>
+</section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    <footer class="footer">
       © 2025 My Website - All rights reserved.
     </footer>
 
+  </main>
 </template>
 
 <script>
+
 import SmoothScroll from "smooth-scroll";
 import Menu from "./components/Menu.vue";
-import Section1 from "./components/Section1.vue";
-import Section2 from "./components/Section2.vue";
+import Home from "./components/pages/Home.vue";
 export default {
   components: {
     Menu,
-    Section1,
-    Section2,
+    Home,
   },
   mounted() {
     new SmoothScroll('a[href*="#"]', {

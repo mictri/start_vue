@@ -1,0 +1,256 @@
+@import "tailwindcss";
+main {
+  @apply clear-both w-full relative overflow-hidden;
+}
+.wrap {
+  @apply w-[1080px] relative mx-auto;
+}
+img {
+  @apply max-w-full w-auto h-auto;
+}
+
+a:hover img {
+  opacity: .7;
+}
+
+
+.txt__center {
+  @apply text-center;
+}
+.box__shadow {
+  @apply overflow-hidden shadow-[3px_3px_6px_rgba(0,0,0,0.19)] rounded-[5px] bg-white;
+}
+.ob-img {
+  @apply bg-cover bg-[center_center] relative block;
+}
+.ob-img img {
+  @apply object-cover w-full h-full md:absolute md:inset-0;
+  -o-object-fit: cover;
+}
+.d__flex {
+  @apply flex flex-wrap;
+}
+.d__flex-jus {
+  @apply justify-between;
+}
+.d__flex-center {
+  @apply items-center;
+}
+
+.bnr__shared {
+  @apply max-w-[300px] block mx-auto;
+}
+.bnr__shared a {
+  @apply block text-white leading-[65px] font-medium text-center transition-all duration-[0.4s] ease-[ease] text-lg overflow-hidden tracking-[0] rounded-[3px] border-2 border-solid border-white;
+}
+.bnr__shared--orange a {
+  @apply border-2 border-solid border-[#FF9900] bg-[#ff9900] hover:text-[#FF9900] hover:border-[#FF9900];
+}
+.bnr__shared--orange a:hover {
+    @apply bg-white;
+}
+.bnr__shared--blue {
+  @apply w-[264px] text-white font-semibold h-[54px] bg-[#0f1339] cursor-pointer transition-all duration-[0.4s] ease-[ease] rounded-[5px] border-2 border-solid border-[#0F1339] hover:text-[#0F1339] hover:border-2 hover:border-solid hover:border-[#0F1339];
+}
+.bnr__shared--blue:hover {
+  @apply bg-white;
+}
+.bnr__shared--darkblue a {
+  @apply border-2 border-solid border-[#0F1339] bg-[#0f1339] hover:text-[#0F1339] hover:border-[#0F1339];
+}
+.bnr__shared--darkblue a:hover {
+  @apply bg-white;
+}
+.bnr__orange__link a {
+  @apply text-white bg-[#ff5700] font-semibold text-center transition-all duration-[0.4s] ease-[ease] mx-auto px-[30px] py-2.5 rounded-[5px] border-2 border-solid border-[#FF5700] hover:text-[#FF5700];
+}
+.bnr__orange__link a:hover {
+  @apply bg-white;
+}
+.darkblueW172 {
+  @apply max-w-[172px];
+}
+.darkblueW172 a {
+  @apply leading-[54px];
+}
+.bnr__darkorange {
+  @apply w-[252px] text-white font-semibold h-[54px] leading-[54px] text-center transition-all duration-[0.4s] ease-[ease] mx-auto rounded-[5px] border-2 border-solid border-[#FF5700] bg-[#ff5700];
+}
+.bnr__web {
+  @apply w-40;
+}
+.bnr__web a {
+  @apply leading-[51px] text-[15px] border-2 border-solid border-[#FF5700] hover:text-[#FF5700] hover:border-[#FF5700] bg-[#ff5700];
+}
+.bnr__web a:hover {
+  @apply bg-white;
+}
+.w272 {
+  @apply w-[272px];
+}
+.bnr__shared--white a {
+  @apply text-[#004267] border-2 border-solid border-[#004267] hover:text-white hover:border-[#004267] bg-white;
+}
+.bnr__shared--white a:hover {
+  @apply bg-[#004267];
+
+}
+@media only screen and (max-width: 560px) {
+  .darkblueW172 a {
+    @apply leading-[70px];
+  }
+  .bnr__shared a {
+    @apply text-[25px];
+  }
+}
+
+/* HEADER */
+.header-box {
+  @apply shadow-[0_3px_6px_rgba(0,0,0,0.19)] p-0 z-5 relative;
+}
+.header-box .logo {
+  @apply w-[252px] absolute left-0 top-[77px];
+}
+.nav__top {
+  @apply text-right absolute -right-0.5 top-[23px];
+}
+.nav__top li {
+  @apply inline-block relative text-sm tracking-[0px] px-[15px] py-0 before:content-[""] before:w-px before:h-[15px] before:absolute before:-translate-y-2/4 before:right-[-3px] before:top-[58%] last:pr-0 last:before:hidden;
+}
+.nav__top li::before {
+  background: #004267;
+}
+.header-nav {
+  @apply items-center flex w-full pt-[72px] pb-[23px] px-0;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  justify-content: end;
+}
+.header-nav .logo {
+  @apply w-[252px];
+}
+.header-nav .bnr__web {
+  @apply mx-0;
+}
+.nav__menu {
+  @apply gap-2.5;
+}
+.nav__menu li {
+  @apply relative;
+}
+.nav__menu li a {
+  @apply text-[15px] font-semibold;
+}
+
+.nav__menu li ul {
+  @apply absolute top-[100%] left-[-50%] w-[200px] bg-white z-2 py-5 shadow-2xl opacity-0 invisible;
+}
+.nav__menu li:hover ul {
+  @apply visible opacity-100;
+}
+.nav__menu li ul a {
+  @apply text-center block py-2;
+}
+
+.nav__top li a:hover,
+.nav__menu li a:hover {
+  @apply underline underline-offset-[6px];
+  -webkit-text-decoration-line: underline;
+}
+.favourite {
+  @apply w-[58px] shadow-[0_3px_6px_rgba(0,0,0,0.16)] overflow-hidden ml-[27px] mr-5 my-0 rounded-[10px];
+}
+@media only screen and (max-width: 560px) {
+  #head-key {
+    @apply h-[510px] pt-[81px];
+  }
+  .header-box {
+    @apply fixed shadow-[0_3px_6px_rgba(0,0,0,0.19)] px-0 py-[25px] bg-white;
+
+  }
+  .header-box .logo {
+    @apply w-60 relative top-0;
+  }
+  .header-nav .bnr__web {
+    @apply mx-auto;
+  }
+  .nav__top {
+    @apply text-left relative pt-5 pb-[100px] left-0 top-0;
+  }
+  .nav__top li {
+    @apply text-lg block pt-5 pb-0 px-10 before:hidden last:pr-0;
+  }
+  .header-nav {
+    @apply h-auto block fixed opacity-0 invisible transition-all duration-[0.35s] ease-[ease] overflow-auto z-[99] pt-[20vw] pb-[30vw] px-0 inset-0;
+    background: #fff;
+  }
+  .header-nav .logo {
+    @apply w-[252px];
+  }
+  .menu-open .header-nav {
+    @apply opacity-100 visible;
+  }
+  .nav__menu {
+    @apply gap-0 block px-5 py-0;
+  }
+  .nav__menu li {
+    @apply block relative after:content-[""] after:h-px after:absolute after:shadow-[0_1px_3px_rgba(0,0,0,0.16)] after:bottom-0 after:inset-x-0;
+  }
+  .nav__menu li::after {
+    background: #ddeaf1;
+  }
+  .nav__menu li a {
+    @apply text-xl font-medium text-[#004267] block p-5;
+  }
+  .favourite {
+    @apply hidden;
+  }
+  .bnr__web {
+    @apply w-[264px];
+  }
+  .header-nav .bnr__shared.bnr__web a {
+    @apply text-lg;
+  }
+}
+.heading__title__icon {
+  @apply text-[23px] font-semibold mb-12 pl-[41px];
+}
+.heading__title__icon span {
+  @apply relative pl-10 after:content-[""] after:w-[330%] after:absolute after:mt-[-3px] after:h-px after:left-[106%] after:top-2/4 before:content-[""] before:bg-[100%_auto] before:w-10 before:h-10 before:absolute before:left-[-15px] before:-translate-y-2/4 before:top-2/4;
+}
+.heading__title__icon span::after {
+  background: #707070;
+}
+.heading__title__icon span::before {
+  @apply bg-[url(@/assets/images/shared/icon_square.png)] bg-no-repeat bg-size-[100%_auto];
+}
+.heading__title__icon small {
+  @apply text-[#4399C9] text-[28px] tracking-[0px];
+}
+.title__heading_h3 {
+  @apply text-2xl relative font-semibold tracking-[1px] pl-4 before:content-[""] before:w-1 before:h-[27px] before:absolute before:-translate-y-2/4 before:rounded-[5px] before:left-0 before:top-[48%];
+}
+.title__heading_h3::before {
+  background: #4399c9;
+}
+@media only screen and (max-width: 560px) {
+  .title__heading_h3 {
+    @apply text-[31px] before:h-[30px] before:top-[55%];
+  }
+  .heading__title__icon {
+    @apply text-[32px] leading-[1.6] pl-5;
+  }
+  .heading__title__icon span {
+    @apply inline-block;
+  }
+  .heading__title__icon small {
+    @apply block text-[32px] pt-0;
+  }
+}
+/*END HEADER*/
+
+/*FOOTER*/
+.footer {
+    @apply bg-amber-950 text-center text-white py-3;
+}
